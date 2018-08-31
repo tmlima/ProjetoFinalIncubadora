@@ -46,13 +46,32 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="PhpTravels\PhpTravelsTests.cs" />
+    <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Csv\TC_001.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IncubadoraDB.Domain\IncubadoraDB.Domain.csproj">
+      <Project>{bef3ac08-994b-4337-9b1c-b8d0d0609efd}</Project>
+      <Name>IncubadoraDB.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IncubadoraDB.Infra\IncubadoraDB.Infra.csproj">
+      <Project>{463611bb-5f15-4f60-a49c-283585c7f091}</Project>
+      <Name>IncubadoraDB.Infra</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AwfulValentine\" />
+    <Folder Include="MercuryTours\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
